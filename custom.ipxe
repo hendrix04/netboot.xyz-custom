@@ -6,7 +6,7 @@
 set mac 52:54:00:8a:34:16
 set mymac ${net0/mac}
 
-iseq ${mymac} ${mac1} && goto chain_script1
+iseq ${mymac} ${mac1} && goto chain_script
 
 echo No dice!
 goto custom_exit
