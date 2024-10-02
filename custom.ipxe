@@ -3,10 +3,17 @@
 ### netboot.xyz-custom menu
 ###
 
-:start
-echo Hello world!
-sleep 10
+set mac 52:54:00:8a:34:16
+set mymac ${net0/mac}
+
+iseq ${mymac} ${mac1} && goto chain_script1
+
+echo No dice!
 goto custom_exit
 
+:chain_script
+echo We ade It!!!
+
 :custom_exit
+sleep 10
 exit 0
